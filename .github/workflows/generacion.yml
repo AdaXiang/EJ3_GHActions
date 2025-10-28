@@ -23,7 +23,7 @@ jobs:
           ls -la
           java -version
           # Genera el código a partir de api.yaml con el jar en la raíz
-          java -jar openapi-generator-cli.jar generate -i api.yml -g python-flask -o ./openapi_server
+          java -jar openapi-generator-cli.jar generate -i api.yaml -g python-flask -o ./openapi_server
 
       - name: Comprimir carpeta generada
         run: zip -r openapi_server.zip openapi_server
